@@ -1,26 +1,25 @@
+<div class="article-all g-mn" style="padding:0 0 50px">
+	<div class="g-box f-cb container">
 
-	<div class="article-all g-mn" style="padding:0 0 50px">
-		<div class="g-box f-cb container">
-
-			<!--文章列表 start-->
-			<div class="m-post m-post-text" style="padding-top:68px">
-				<div class="cont ">
-					<div class="text f-cb">
-						<h1 class="title"><%- post.title %></h1>
-						<%- post.content %>
-					</div>
-				</div>
-				<div class="subinfo">
-					<a href="">
-						<%- date(post.date,'YYYY-MM-DD')%>
-					</a>				
-					<%- partial('tag') %>
+		<!--文章列表 start-->
+		<div class="m-post m-post-text" style="padding-top:68px">
+			<div class="cont ">
+				<div class="text f-cb">
+					<h1 class="title"><%- post.title %></h1>
+					<%- post.content %>
 				</div>
 			</div>
-			<!--文章列表 end-->
-
-			<!--分页 start-->
-			<%- partial('_partial/pagination') %>
-			<!--分页 end-->
+			<div class="subinfo">
+				<a href="">
+					<%- date(post.date,'YYYY-MM-DD')%>
+				</a>
+				<%- partial('tag') %>
+			</div>
 		</div>
+		<!--文章列表 end-->
+
+		<!--分页 start-->
+		<%- partial('_partial/pagination') %>
+		<!--分页 end-->
 	</div>
+</div>

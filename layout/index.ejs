@@ -1,0 +1,16 @@
+<div class="g-mn">
+	<div class="g-box f-cb container">
+
+		<!--文章列表 start-->
+		<div class="m-posts">
+			<% page.posts.each(function(item){ %>
+			<%- partial('_partial/article-summary', {item: item}) %>
+			<% }); %>
+		</div>
+		<!--文章列表 end-->
+
+		<!--分页 start-->
+		<%- partial('_partial/pagination') %>
+		<!--分页 end-->
+	</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="m-page f-cb">
+	<% if(is_post()){ %>
+		<% if(page.prev){ %>
+			<a class="f-fl" href="<%- url_for(page.prev.path) %>">
+				<%- __('上一篇') %>
+			</a>
+		<% } %>
+		<% if(page.next){ %>
+			<a class="f-fr" href="<%- url_for(page.next.path) %>">
+				<%- __('下一篇') %>
+			</a>
+		<% } %>
+	<% } else { %>
+		<% if(page.prev){ %>
+			<a class="f-fl" href="<%- url_for(page.prev_link) %>">
+				<%- __('上一页')%>
+			</a>
+		<% } %>
+		<% if(page.next){ %>
+			<a class="f-fr" href="<%- url_for(page.next_link) %>">
+				<%- __('下一页')%>
+			</a>
+		<% } %>
+	<% } %>
+</div>

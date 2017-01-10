@@ -1,0 +1,32 @@
+<script>
+	window.onload = function() {
+		/*var oTop = document.getElementById("to_top");
+		var screenw = document.documentElement.clientWidth || document.body.clientWidth;
+		var screenh = document.documentElement.clientHeight || document.body.clientHeight;
+		oTop.style.left = screenw - oTop.offsetWidth + "px";
+		oTop.style.top = screenh - oTop.offsetHeight + "px";
+		window.onscroll = function() {
+			var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+			oTop.style.top = screenh - oTop.offsetHeight + scrolltop + "px";
+		}
+		oTop.onclick = function() {
+			document.documentElement.scrollTop = document.body.scrollTop = 0;
+		}*/
+		// 可爱title切换
+		var OriginTitile = document.title;
+		var st;
+		document.addEventListener('visibilitychange', function() {
+			if(document.hidden) {
+				document.title = unescape("%28%u3064%u30A7%u2282%29%u6211%u85CF%u597D%u4E86%u54E6") + "★" + OriginTitile;
+				clearTimeout(st);
+			} else {
+				document.title = unescape("%28*%B4%u2207%uFF40*%29%20%20%u88AB%u4F60%u53D1%u73B0%u5566%7E%20") + "★" + OriginTitile;
+				st = setTimeout(function() {
+					document.title = OriginTitile;
+				}, 4000);
+			}
+		});
+	}
+</script>
+<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script> 
+<script>hljs.initHighlightingOnLoad();</script> 

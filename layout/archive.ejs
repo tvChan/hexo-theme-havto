@@ -1,0 +1,22 @@
+<%
+    var title = '';
+    if (page.category) title = page.category;
+    if (page.tag) title = "#" + page.tag;
+    if (page.archive) {
+        if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+        else title = __('archive_a');
+    }
+%>
+<!-- Main Content -->
+<div class="g-mn">
+	<div class="g-box f-cb container">
+		<header class="tag-title"><%- title %></header>
+		<!--文章列表 start-->
+		<div class="m-posts">
+            <% page.posts.each(function(item){ %>
+                <%- partial('_partial/article-archive', {item: item}) %>
+            <% }); %>
+            <%- partial('_partial/pagination') %>
+        </div>
+    </div>
+</div>
